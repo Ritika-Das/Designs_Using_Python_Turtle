@@ -2,6 +2,8 @@ import turtle
 import math
 
 ts = turtle.getscreen()
+
+#this sets colormode from 1 to 255 (for rgb)
 ts.colormode(255)
 
 t = turtle.Turtle()
@@ -17,8 +19,9 @@ sides = 60
 # calculating the number of angles in a polygon with 60 sides , value of angle between each adjacent sides, then finding the angles of the diagonals
 number_of_angles = (sides-2)*180
 each_angle = number_of_angles/sides
-
+print(each_angle)
 per_turn = each_angle/sides
+print(per_turn)
 
 radius = (side_length*60)/(math.pi*2)
 move_length = side_length
@@ -29,6 +32,7 @@ while flag!="end":
     if i == 61:
         flag = "end"
     turn_angle = i*(per_turn)
+    
     # t.pencolor(0,220,255) if (i<=sides/2) else t.pencolor(255,105,180) # half colors
     t.pencolor(0,220,255) if (i%2) else t.pencolor(255,105,180) # alternating colors
 

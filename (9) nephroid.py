@@ -29,12 +29,12 @@ while flag!="end":
     if i == 61:
         flag = "end"
 
-    # nephroid is basically a cardioid with triple the angle to change at each point
+    # nephroid is basically a cardioid with triple the angle at each point.
     turn_angle = 2*i*(per_turn)
 
 
     # t.pencolor(255,0,70)  if (i<=sides/2) else t.pencolor(225,0,255) # half colors
-    t.pencolor(255,0,150)  if (i%2) else t.pencolor(225,0,255)  #alternating colors
+    t.pencolor(255,0,70)  if (i%2) else t.pencolor(225,0,255)  #alternating colors
 
     # Could'nt find the perfect length of each diagonal, but all these values look good
 
