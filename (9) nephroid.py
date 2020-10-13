@@ -28,14 +28,19 @@ move_length = side_length
 while flag!="end":
     if i == 61:
         flag = "end"
+
+    # nephroid is basically a cardioid with triple the angle to change at each point
     turn_angle = 2*i*(per_turn)
-    t.pencolor(0,255,255)
+
+
+    # t.pencolor(255,0,70)  if (i<=sides/2) else t.pencolor(225,0,255) # half colors
+    t.pencolor(255,0,150)  if (i%2) else t.pencolor(225,0,255)  #alternating colors
 
     # Could'nt find the perfect length of each diagonal, but all these values look good
 
-    # move_length = (radius*2)*i/(sides/2)*1.6 if (i<=sides/2) else -(radius*2)*(sides-i)/(sides/2)*1.6
     move_length = radius*2 if (i<=sides/2) else -(radius*2)
-    # move_length = side_length*(0.7*i)
+    # move_length = (radius*2)*i/(sides/2)*1.6 if (i<=sides/2) else -(radius*2)*(sides-i)/(sides/2)*1.6
+    # move_length = side_length*(0.7*i) if (i<=sides/2) else -side_length*(0.7*(sides-i))
     # move_length = i*(1.6) if (i<=sides/2) else -(sides - i)*1.6                               #value of phi(golden ratio) gave some weird lines but it kinda makes sense?
     # move_length = (radius*2*(i/sides/2)) if (i<=sides/2) else -(radius*2*((sides-i)/sides/2))  # the ratio of radius and the diagonal count gives the golden ratio too!
 
